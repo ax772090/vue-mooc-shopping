@@ -28,6 +28,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      //  代理插件，Axios不支持跨域，所以这里使用代理的方式,很重要
       '/goods':{
           target:'http://localhost:3000'
       },

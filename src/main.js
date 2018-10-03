@@ -21,8 +21,8 @@ Vue.use(VueLazyload, {
     try: 3 // default 1
 })
 
-Vue.filter("currency", currency);
-Vue.config.productionTip = false;
+Vue.filter("currency", currency);//注册全局过滤器
+Vue.config.productionTip = false;//设置为false，以阻止vue在启动时生成生产提示
 
 const store = new Vuex.Store({
     state: {

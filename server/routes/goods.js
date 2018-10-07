@@ -2,7 +2,7 @@ var express = require('express')
 var router = express.Router()
 var mongoose = require('mongoose')
 var Goods = require('../models/goods')
-var User = require('../models/users')
+var Users = require('../models/users')
 
 //连接MongoDB数据库
 mongoose.connect('mongodb://127.0.0.1:27017/dbmooc')
@@ -82,7 +82,7 @@ router.get("/list", function (req, res, next) {
 router.post("/addCart", function (req, res, next) {
     //拿到用户信息，判断用户是否存在
     var userId = "100000077", productId = req.body.productId;
-    User.findOne({userId: userId}, function (err, userDoc) {
+	Users.findOne({userId: userId}, function (err, userDoc) {
         //这个userDoc是从User表中根据userId拿到的所有数据
         if (err) {
             res.json({

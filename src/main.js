@@ -8,11 +8,13 @@ import Vuex from 'vuex'
 import VueLazyload from 'vue-lazyload'
 import infiniteScroll from 'vue-infinite-scroll'
 import {currency} from './util/currency'
+import ElementUI from "element-ui"
 
 import './assets/css/base.css'
 import './assets/css/checkout.css'
 import './assets/css/login.css'
 import './assets/css/product.css'
+import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(infiniteScroll);
 Vue.use(Vuex);
@@ -21,6 +23,7 @@ Vue.use(VueLazyload, {
     try: 3 // default 1
 })
 
+Vue.use(ElementUI);
 Vue.filter("currency", currency);//注册全局过滤器
 Vue.config.productionTip = false;//设置为false，以阻止vue在启动时生成生产提示
 

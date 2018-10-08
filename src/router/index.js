@@ -10,36 +10,35 @@ import OrderSuccess from '@/views/OrderSuccess'
 Vue.use(Router);
 
 export default new Router({
-  routes: [
-    {
-      path: '/',
-      name: 'GoodsList',
-      component:GoodsList
-    },
-    {
-      path: '/cart',
-      name: 'Cart',
-      component:Cart
-    },
-    {
-      path: '/goods',
-      name: 'GoodsList',
-      component: GoodsList
-    },
-    {
-      path: '/address',
-      name: 'Address',
-      component:Address
-    },
-    {
-      path: '/orderConfirm',
-      name: 'OrderConfirm',
-      component:OrderConfirm
-    },
-    {
-      path: '/orderSuccess',
-      name: 'OrderSuccess',
-      component:OrderSuccess
-    }
-  ]
+	routes: [{
+			path: '/',
+			name: 'GoodsList',
+			component: GoodsList
+		},
+		{
+			path: '/cart',
+			name: 'Cart',
+			component: Cart
+		},
+		{
+			path: '/goods',
+			name: 'GoodsList',
+			component: GoodsList
+		},
+		{
+			path: '/address',
+			name: 'Address',
+			component: Address
+		},
+		{
+			path: '/orderConfirm',
+			name: 'OrderConfirm',
+			component: OrderConfirm
+		},
+		{
+			path: '/orderSuccess',
+			name: 'OrderSuccess',
+			component: OrderSuccess
+		}
+	]
 })
